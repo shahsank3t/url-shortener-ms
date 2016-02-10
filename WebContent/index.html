@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>URL Shortener MicroService</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center">URL Shortener Microservice</h1>
+		
+			<h3>To create a shorter url, append your url to:</h3>
+			<code>https://url-shortener-ms-shahsank3t.c9users.io/new/<YOUR-URL></code>
+			
+			<h3>Example to create shorter url:</h3>
+			<code>https://url-shortener-ms-shahsank3t.c9users.io/new/https://www.google.com</code>
+			<br/>
+			<code>https://url-shortener-ms-shahsank3t.c9users.io/new/http://www.enginerd.in</code>
+			
+			<h3>Example of output:</h3>
+			<code>{ "originalUrl": "https://www.google.com", "shorterUrl": "https://url-shortener-ms-shahsank3t.c9users.io/1" }</code>
+			<br/>
+			<code>{ "originalUrl": "http://www.enginerd.in", "shorterUrl": "https://url-shortener-ms-shahsank3t.c9users.io/2" }</code>
+			
+			<h3>Usage:</h3>
+			<code><a href="https://url-shortener-ms-shahsank3t.c9users.io/1">https://url-shortener-ms-shahsank3t.c9users.io/1</a></code>
+
+			<h3>Will redirect you to:</h3>
+			<code><a href="https://www.google.com">https://www.google.com</a></code>
+		</div>
+	</body>
+</html>
