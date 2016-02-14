@@ -17,6 +17,7 @@ var UrlModel = mongoose.model('URL', new Schema({
 app.use(express.static(__dirname+'/WebContent'));
 
 app.get(/^\/new\/([a-zA-Z0-9\/:.]*)$/, function(req, res){
+	res.writeHead(200, {"Content-Type": "application/json"});
 	var regex = /(http|https):\/\/[A-Za-z0-9\.-]{3,}\.[A-Za-z]{2,}$/;
 	var url = req.params[0];
 	if(!regex.test(url)){
@@ -42,7 +43,7 @@ app.get(/^\/new\/([a-zA-Z0-9\/:.]*)$/, function(req, res){
 
 app.get('/:id', function(req, res){
 	var id = req.params.id;
-	
+	res.writeHead(200, {"Content-Type": "application/json"});
 	UrlModel.findOne({countId: id}, function(err, urlModel){
 		if(urlModel){
 			res.redirect(urlModel.originalUrl);
